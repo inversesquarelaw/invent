@@ -74,7 +74,7 @@ def getBoardCopy(board):
 #checks if it is a valid move
 def isSpaceFree(board, move):
     #return true if the passed move is free on the passed board
-    return board[move] == ' '
+    return board[move] == ' ' or board[move] == '1' or board[move] == '2' or board[move] == '3' or board[move] == '4' or board[move] == '5' or board[move] == '6' or board[move] == '7' or board[move] == '8' or board[move] == '9'
 
 def getPlayerMove(board):
     #let the player type in his move
@@ -144,8 +144,8 @@ while True:
     #reset the board
     theBoard = [' '] * 10
     
-    for i in len(theBoard):
-        theBoard
+    for i in range(len(theBoard)):
+        theBoard[i] = str(i)
 
     playerLetter, computerLetter = inputPlayerLetter()
     turn = whoGoesFirst()
